@@ -20,6 +20,16 @@ if true then return {
     },
   },
 },
+    {
+  "kopecmaciej/vi-mongo.nvim",
+  config = function()
+    require("vi-mongo").setup()
+  end,
+  cmd = { "ViMongo" },
+  keys = {
+    { "<leader>vm", "<cmd>ViMongo<cr>", desc = "ViMongo" }
+  }
+},
 } end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
